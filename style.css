@@ -1,46 +1,123 @@
-body {
-    margin: 0;
-    font-family: Arial;
-    background-color: #f4f4f4;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f4f4f4, #e8f0e8);
+}
+
+/* Header */
 header {
     background: #2b5825;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 80px 20px;
+    transition: all 0.5s ease;
 }
 
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Sections */
 section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 h2 {
     color: #2b5825;
+    margin-bottom: 20px;
+    position: relative;
 }
 
+/* Underline animation */
+h2::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #2b5825;
+    display: block;
+    margin: 10px auto;
+    transition: width 0.4s ease;
+}
+
+h2:hover::after {
+    width: 80px;
+}
+
+/* Skills List */
 ul {
     list-style: none;
     padding: 0;
 }
 
 ul li {
-    padding: 8px;
+    padding: 10px;
+    margin: 5px auto;
+    width: 200px;
+    background: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Project Cards */
 .project-card {
     background: white;
-    margin: 15px auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 25px;
     width: 60%;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Contact */
+.contact p {
+    font-size: 16px;
+}
+
+/* Footer */
 footer {
     background: #2b5825;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    margin-top: 40px;
+}
+
+/* Button Style (if you add buttons later) */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #2b5825;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #3e7a35;
+    transform: scale(1.05);
 }
